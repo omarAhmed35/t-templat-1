@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Varela Round', sans-serif;
+}
+h1,h2,h3,h4.h5,h6{
+    font-family: montserrat,sans-serif;
+}
+/* ---------------general--------------- */
+.contaner{
+    width: 80%;
+    margin: auto;
+}
+:root{
+    --mineBlueColor:#6195ff;
+    --grayColor:#999;
+    --lightGrayColor:#e8e8e8;
+    --veryLightGrayColor:#f9f9f9;
+    --whiteColor:#fff;
+}
+.clear{
+    clear: both;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.overlay{
+    height: 100%;
+    background-color: rgba(8, 8, 8, 0.7);
+}
+.hover-opasity{transition: 0.3s;}
+.hover-opasity:hover{
+    opacity: 0.7;
+}
+.section-header{
+    height: 100px;
+    text-align: center;
+}
+.section-title{
+    font-size: 35px;
+    text-transform: capitalize;
+}
+.down-line{
+    width: 70px;
+    height: 5px;
+    background-color: var(--mineBlueColor);
+    margin: 15px auto;
+}
+.section-padd{
+    padding: 120px 0px;
+}
+.hover-effect-ltr::after , .hover-effect-utd::after{
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgb(35, 35, 35) ;
+    z-index: -1;
+}
+.hover-effect-utd::after{
+    height: 0%;
+    transition: height 0.5s;
+}
+.hover-effect-ltr::after{
+    width: 0%;
+    transition: width 0.5s;
+}
+.hover-effect-utd:hover:after{
+    height: 100%;
+}
+.mg{
+    margin: 0 5%;
+}
+/* ---------------------numbers sction----------------------- */
+.numbers{
+    height: 300px;
+    background-image: url(../images/background/background2.webp);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.numbers .overlay{
+    top: 0;
+    left: 0;
+}
+.num-item{
+    width: 25%;
+    text-align: center;
+    margin-top:150px ;
+    transform: translateY(-50%);
+    float: left;
+}
+.num-icon{
+    font-size: 35px;
+}
+.num-title{
+    padding: 10px 0;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.num-p{
+    text-transform: capitalize;
+}
+/* ---------------------prices sction----------------------- */
+.pric-item{
+    width: 30%;
+    border: 1px solid var(--lightGrayColor);
+    text-align: center;
+    padding: 10px 0;
+    float: left;
+}
+.pric-title{
+    padding: 25px 0 10px 0;
+    text-transform: uppercase;
+    transition: color 0.5s ;
+}
+.pric-num{
+    width: 150px;
+    padding: 38px 0;
+    border: 2px solid var(--mineBlueColor);
+    border-radius: 50%;
+    margin: 10px auto;
+    text-align: center;
+}
+.pric-p{
+    font-size: 20px;
+    transition: color 0.5s ;
+}
+.pric-p.p1{
+    font-weight: bolder;
+    font-size: 38px;
+}
+.pric-item ul li{
+    padding: 8px 0;
+}
+.pric-but{
+    width: 150px;
+    height: 38px;
+    margin: 20px 0;
+    border: 2px solid var(--mineBlueColor);
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* ---------------------slider sction----------------------- */
+.slider{
+    height: 380px;
+    background-image: url(../images/background/background3.webp);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.slider-item{
+    width: 50%;
+    padding-top: 125px;
+    padding-left: 75px;
+    float: left;
+}
+.slider-item-head{
+    padding: 25px 0px 25px 100px;
+}
+.slider-item-head img{
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+}
+.slidwe-item-p{
+    padding: 10px 0;
+    line-height: 1.5;
+}
+/* ---------------------team sction----------------------- */
+.team-item{
+    width: 30%;
+    background-color: var(--lightGrayColor);
+    padding: 30px;
+    float: left;
+}
+.team-item.hover-effect-utd{z-index: 1;}
+.team-item-img{
+    margin: auto;
+}
+.team-item-img .overlay{
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s ;    
+}
+.team-item-a{
+    display: block;
+    background-color: var(--mineBlueColor);
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s ;
+}.team-item-a:hover{background-color: #4a86ff;}
+.team-item:hover .team-item-img .overlay,.team-item:hover .team-item-a{
+    visibility: visible;
+    opacity: 1;   
+}
+.team-item-a i{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.team-item-content{
+    text-align: center;
+}
+.team-item-title{
+    padding: 10px 0;
+    transition: color 0.5s;
+}
+.team-item-p{
+    transition: color 0.5s;
+}
+/* ---------------------news sction----------------------- */
+.news{
+    background-color: var(--veryLightGrayColor);
+}
+.news-item{
+    width: 30%;
+    background-color: var(--whiteColor);
+    float: left;
+}
+.news-item ul li{
+    padding: 20px 15px;
+    display: inline-block;
+}
+.news-icon{
+    padding-right: 5px;
+}
+.news-title{
+    padding: 10px 15px;
+}
+.news-p{
+    padding: 10px 15px;
+    line-height: 1.5;
+}
+.news-but{
+    margin: 10px 15px;
+    border: none;
+    background: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+/* ---------------------contact sction----------------------- */
+.contact-content-item{
+    width: 30%;
+    text-align: center;
+    float: left;
+}
+.contact-icon{
+    font-size: 30px;
+    margin: 10px 0;
+}
+.contact-title{
+    margin: 10px 0;
+}
+.contact-p{
+    padding: 10px 0;
+    font-size: 18px;
+}
+/* ---------------------contact inputs--------------------- */
+.contact-inputs{
+    text-align: center;
+    padding: 20px 0;
+}
+.contact-inputs input , .contact-inputs textarea{
+    display: block;
+    width: 61%;
+    height: 38px;
+    margin: 20px auto;
+    background-color: #f4f4f4;
+    border: none;
+    padding: 0 8px;
+    border-radius: 5px;
+    outline:none;
+}
+.contact-inputs input[type="submit"]{
+    width: 13%;
+    background-color: var(--mineBlueColor);
+    cursor: pointer;
+}
+.contact-inputs .tow-input{
+    display: inline-block;
+    width: 30%;
+    margin: 0px 7px;
+}
+/* ---------------------footer sction----------------------- */
+.footer,.footer2{
+    height: 300px;
+    background-color: #1c1d21;
+    text-align: center;
+    padding: 50px 0;
+}
+.footer ul li,.footer2 ul li{
+    display: inline-block;
+    margin: 20px;
+}
+.footer ul li a,.footer2 ul li a{
+    display: block;
+    background-color: var(--mineBlueColor);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.footer-icon,.footer2-icon{
+    line-height: 50px;
+}
+.footer-p,.footer2-p{
+    padding: 10px 0;
+    word-spacing: 2px;
+}

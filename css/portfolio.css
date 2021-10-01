@@ -1,0 +1,74 @@
+/* ---------------------Portfolio sction----------------------- */
+.portfolio{
+    background-color: var(--veryLightGrayColor);
+}
+.port-item{
+    width: 28%;
+    height: 426px;
+    float: left;
+    margin:0 2.5% 20px 2.5% ;
+}
+.port-item img{
+    width: 92%;
+    height: 92%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.port-item .overlay{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+}
+.port-item-content{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.port-item-title{
+    font-size: 20px;
+    transform: translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition:transform 0.5s,opacity 0.5s,visibility 0.5s ;
+    transition-delay: 0.1s;
+}
+.port-item-p{
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 15px;
+    transform: translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition:transform 0.5s,opacity 0.5s,visibility 0.5s ;
+    transition-delay: 0.2s;
+}
+.port-item-but{
+    width: 38px;
+    height: 38px;
+    background-color: var(--mineBlueColor);
+    border: none;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition:transform 0.5s,opacity 0.5s,visibility 0.5s ;
+    transition-delay: 0.3s;
+    cursor: pointer;
+    
+}
+.port-item-but-icon{
+    cursor: pointer;
+}
+.port-item:hover .port-item-title ,.port-item:hover .port-item-p ,.port-item:hover .port-item-but{
+    transform: translateY(-10px);
+    opacity: 1;
+    visibility: visible;
+}
+.port-item:hover .overlay{
+    visibility: visible;
+    opacity: 1;
+}

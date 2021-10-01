@@ -1,0 +1,55 @@
+/* ---------------------services sction----------------------- */
+.services{
+    background-color: var(--veryLightGrayColor);
+}
+/* ----------------left--------- */
+.left-section{
+    width: 50%;
+    float: left;
+}
+.left-section .section-header{
+    text-align: left;
+}
+.left-section .down-line{
+    margin:15px auto 0px 0px;
+}
+.left-section-p{
+    padding: 15px 10px 15px 0px;
+}
+.left-section-ul li{
+    padding: 15px 0;
+}
+.left-section-ul .li-icon{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border: 1px solid var(--mineBlueColor);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+}
+
+/* ----------------right--------- */
+.right-section{
+    width: 50%;
+    float: left;
+}
+.right-section img{
+    display: block;
+}
+.right-section ul{
+    display: block;
+    text-align: center;
+}
+.right-section ul li{
+    display:inline-block;
+    background-color: var(--grayColor);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 10px 5px;
+    cursor: pointer;
+}.right-section ul .li1{background-color: var(--mineBlueColor);}
+.right-section ul li:hover{
+    background-color: var(--mineBlueColor);
+}

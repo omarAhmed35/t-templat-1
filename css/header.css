@@ -1,0 +1,116 @@
+/* ---------------------header----------------------- */
+/* ---------------------nav bar----------------------- */
+.header{
+    height: 100vh;
+    background-image: url(../images/background/background1.webp);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.nav-bar{
+    height: 70px;
+    margin: auto;
+    background-color: rgba(53, 53, 53, 0.5);
+    position: fixed;
+    z-index: 100;
+}
+.logo{
+    float: left;
+    width: 20%;
+    line-height: 70px;
+    font-size: 38px;
+    padding: 0 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.nav-bar ul{
+    float: left;
+    width: 80%;
+    text-align: right;
+    line-height: 70px;
+}
+.nav-bar ul li{
+    display: inline-block;
+}
+.nav-bar ul li a{
+    display:block;
+    padding: 0 13px;
+    font-size: 18px;
+}
+.nav-bar ul li a.active::after,.nav-bar ul li a::after{
+    content: "";
+    display: block;
+    height: 3px;
+    margin-top:-20px ;
+    background-color: var(--mineBlueColor);
+    transition: width 0.3s;
+}
+.nav-bar ul li a::after{
+    width: 0;
+}
+.blog-li:hover .blog-post{
+    opacity: 1;
+    visibility: visible;
+}
+.blog-li:hover:after{transform: rotateZ(45deg);}
+.blog-li::after{
+    content: "";
+    top: 60%;
+    right: 0%;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid var(--mineBlueColor);
+    border-bottom: 2px solid var(--mineBlueColor);
+    transform: rotateZ(-45deg);
+    transition:0.3s;
+}
+.blog{
+    margin-right: 5px;
+}
+.blog-post{
+    position:absolute;
+    bottom: -120%;
+    left: 0;
+    width: 170px;
+    background-color: var(--mineBlueColor);
+    margin-left: -70%;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s,visibility 0.3s;
+}
+/* ---------------------header content----------------------- */
+.header-content{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    text-align: center;
+}
+.header-h1,.header-p{
+    padding: 30px 0;
+}
+.header-h1{
+    font-size: 55px;
+    text-transform: uppercase;
+
+}
+.but{
+    width: 150px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+}
+.but-color{
+    background-color: var(--mineBlueColor);
+}
+.header-p{
+    word-spacing:53x;
+    letter-spacing: 2px;
+    line-height: 2;
+}
